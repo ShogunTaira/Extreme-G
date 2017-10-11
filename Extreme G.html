@@ -1,0 +1,3824 @@
+<tw-storydata name="Extreme G" startnode="1" creator="Twine" creator-version="2.1.3" ifid="56336929-DE89-4ED0-B6EB-550EF418EA19" format="Harlowe" format-version="2.0.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@font-face {
+    font-family: 'isl_andvariregular';
+    src: url('andvari-webfont.woff2') format('woff2'),
+         url('andvari-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+-----------------------------------------------------------------------
+
+@charset "UTF-8";
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2015 Daniel Eden
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animated.bounceIn,
+.animated.bounceOut {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+
+@-webkit-keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+@-webkit-keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes wobble {
+  from {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes wobble {
+  from {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+}
+
+@-webkit-keyframes jello {
+  from, 11.1%, to {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+
+  77.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+
+  88.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}
+
+@keyframes jello {
+  from, 11.1%, to {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+
+  77.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+
+  88.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}
+
+.jello {
+  -webkit-animation-name: jello;
+  animation-name: jello;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+@-webkit-keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+@-webkit-keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+
+@-webkit-keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+@-webkit-keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+}
+
+@keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+}
+
+.bounceOut {
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut;
+}
+
+@-webkit-keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+@keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+.bounceOutDown {
+  -webkit-animation-name: bounceOutDown;
+  animation-name: bounceOutDown;
+}
+
+@-webkit-keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+.bounceOutLeft {
+  -webkit-animation-name: bounceOutLeft;
+  animation-name: bounceOutLeft;
+}
+
+@-webkit-keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+
+@keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+
+.bounceOutRight {
+  -webkit-animation-name: bounceOutRight;
+  animation-name: bounceOutRight;
+}
+
+@-webkit-keyframes bounceOutUp {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@keyframes bounceOutUp {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeOutDownBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+@keyframes fadeOutDownBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+.fadeOutDownBig {
+  -webkit-animation-name: fadeOutDownBig;
+  animation-name: fadeOutDownBig;
+}
+
+@-webkit-keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutLeftBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+@keyframes fadeOutLeftBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+.fadeOutLeftBig {
+  -webkit-animation-name: fadeOutLeftBig;
+  animation-name: fadeOutLeftBig;
+}
+
+@-webkit-keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+@-webkit-keyframes fadeOutRightBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+
+@keyframes fadeOutRightBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+
+.fadeOutRightBig {
+  -webkit-animation-name: fadeOutRightBig;
+  animation-name: fadeOutRightBig;
+}
+
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+}
+
+@-webkit-keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+.animated.flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+}
+
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+
+@-webkit-keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
+@-webkit-keyframes flipOutX {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutX {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+.flipOutX {
+  -webkit-animation-name: flipOutX;
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+
+@-webkit-keyframes flipOutY {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutY {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+.flipOutY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipOutY;
+  animation-name: flipOutY;
+}
+
+@-webkit-keyframes lightSpeedIn {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes lightSpeedIn {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes lightSpeedOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+.lightSpeedOut {
+  -webkit-animation-name: lightSpeedOut;
+  animation-name: lightSpeedOut;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes rotateIn {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateIn {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+}
+
+@-webkit-keyframes rotateInDownLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateInDownLeft {
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+}
+
+@-webkit-keyframes rotateInDownRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateInDownRight {
+  -webkit-animation-name: rotateInDownRight;
+  animation-name: rotateInDownRight;
+}
+
+@-webkit-keyframes rotateInUpLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateInUpLeft {
+  -webkit-animation-name: rotateInUpLeft;
+  animation-name: rotateInUpLeft;
+}
+
+@-webkit-keyframes rotateInUpRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -90deg);
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -90deg);
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateInUpRight {
+  -webkit-animation-name: rotateInUpRight;
+  animation-name: rotateInUpRight;
+}
+
+@-webkit-keyframes rotateOut {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 200deg);
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 200deg);
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+
+.rotateOut {
+  -webkit-animation-name: rotateOut;
+  animation-name: rotateOut;
+}
+
+@-webkit-keyframes rotateOutDownLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutDownLeft {
+  -webkit-animation-name: rotateOutDownLeft;
+  animation-name: rotateOutDownLeft;
+}
+
+@-webkit-keyframes rotateOutDownRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutDownRight {
+  -webkit-animation-name: rotateOutDownRight;
+  animation-name: rotateOutDownRight;
+}
+
+@-webkit-keyframes rotateOutUpLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutUpLeft {
+  -webkit-animation-name: rotateOutUpLeft;
+  animation-name: rotateOutUpLeft;
+}
+
+@-webkit-keyframes rotateOutUpRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutUpRight {
+  -webkit-animation-name: rotateOutUpRight;
+  animation-name: rotateOutUpRight;
+}
+
+@-webkit-keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%, 60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%, 80% {
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 700px, 0);
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%, 60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%, 80% {
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 700px, 0);
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+
+.hinge {
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.rollIn {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes rollOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+  }
+}
+
+@keyframes rollOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+  }
+}
+
+.rollOut {
+  -webkit-animation-name: rollOut;
+  animation-name: rollOut;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomInDown {
+  -webkit-animation-name: zoomInDown;
+  animation-name: zoomInDown;
+}
+
+@-webkit-keyframes zoomInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes zoomInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomInLeft {
+  -webkit-animation-name: zoomInLeft;
+  animation-name: zoomInLeft;
+}
+
+@-webkit-keyframes zoomInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes zoomInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomInRight {
+  -webkit-animation-name: zoomInRight;
+  animation-name: zoomInRight;
+}
+
+@-webkit-keyframes zoomInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomInUp {
+  -webkit-animation-name: zoomInUp;
+  animation-name: zoomInUp;
+}
+
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}
+
+@-webkit-keyframes zoomOutDown {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes zoomOutDown {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomOutDown {
+  -webkit-animation-name: zoomOutDown;
+  animation-name: zoomOutDown;
+}
+
+@-webkit-keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(.1) translate3d(-2000px, 0, 0);
+    transform: scale(.1) translate3d(-2000px, 0, 0);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+}
+
+@keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(.1) translate3d(-2000px, 0, 0);
+    transform: scale(.1) translate3d(-2000px, 0, 0);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+}
+
+.zoomOutLeft {
+  -webkit-animation-name: zoomOutLeft;
+  animation-name: zoomOutLeft;
+}
+
+@-webkit-keyframes zoomOutRight {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(.1) translate3d(2000px, 0, 0);
+    transform: scale(.1) translate3d(2000px, 0, 0);
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+}
+
+@keyframes zoomOutRight {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(.1) translate3d(2000px, 0, 0);
+    transform: scale(.1) translate3d(2000px, 0, 0);
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+}
+
+.zoomOutRight {
+  -webkit-animation-name: zoomOutRight;
+  animation-name: zoomOutRight;
+}
+
+@-webkit-keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomOutUp {
+  -webkit-animation-name: zoomOutUp;
+  animation-name: zoomOutUp;
+}
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+@-webkit-keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  -webkit-animation-name: slideOutDown;
+  animation-name: slideOutDown;
+}
+
+@-webkit-keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+}
+
+@-webkit-keyframes slideOutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+
+@-webkit-keyframes slideOutUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.slideOutUp {
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
+}
+
+
+-----------------------------------------------------------------------
+
+/* Background images for each team */
+
+tw-story[tags~="teamtrinity"] {
+	background-image: url("https://i.gyazo.com/f071e3205d27daea04c7671e798c0020.jpg");
+	background-size: auto;
+  	background-color: #000000;
+  	background-position: center;
+}
+
+tw-story[tags~="prospa"] {
+	background-image: url("https://i.gyazo.com/0310d682bf7c0713c34572b5b51ee5bd.jpg");
+	background-size: auto;
+  	background-color: #000000;
+  	background-position: center;
+}
+
+tw-story[tags~="ascend"] {
+	background-image: url("https://i.gyazo.com/e359480842c34e07238d19e15f3cc94c.jpg");
+	background-size: auto;
+  	background-color: #000000;
+  	background-position: center;
+}
+
+tw-story[tags~="olympius"] {
+	background-image: url("https://i.gyazo.com/95283501132b13fc9d8d4a4c05f25c28.jpg");
+	background-size: auto;
+  	background-color: #000000;
+  	background-position: center;
+}
+
+tw-story[tags~="starcom"] {
+	background-image: url("https://i.gyazo.com/eba69134a843458b0942c6a7329db4bb.jpg");
+	background-size: auto;
+  	background-color: #000000;
+  	background-position: center;
+}
+
+tw-story[tags~="trinity"] {
+  background-image: url("https://i.gyazo.com/f071e3205d27daea04c7671e798c0020.jpg");
+  background-size: auto;
+  background-color: #000000;
+  background-position: center;
+}
+
+tw-story[tags~="extreme"] {
+  background-image: url("https://i.gyazo.com/0aeb731a58fb81a1b25f32322abb2342.jpg");
+  background-size: auto;
+  background-color: #000000;
+  background-position: center;
+}
+
+tw-story[tags~="Amnes-Isle"] {
+  background-image: url("https://i.gyazo.com/1cc77e98f9245b39e1b522a2b6af17b8.jpg");
+  background-size: cover;
+  background-color: #000000;
+  background-position: center;
+}
+
+tw-story[tags~="Volistead"] {
+  background-image: url("https://i.gyazo.com/7fe733bf34d1896b4bf09a3a9fdd6d67.jpg");
+  background-size: cover;
+  background-color: #000000;
+  background-position: center;  
+}
+
+tw-story[tags~="Dahr-Canyon"] {
+  background-image: url("https://i.gyazo.com/51341a49359dd4bd4607a46659496f9b.jpg");
+  background-size: cover;
+  background-color: #000000;
+  background-position: center; 
+}
+
+tw-story[tags~="Pion-6"] {
+  background-image: url("https://i.gyazo.com/a250bce4c76c307b33891095b06ae353.jpg");
+  background-size: cover;
+  background-color: #000000;
+  background-position: center; 
+}
+
+tw-story[tags~="Atradaitoshi"] {
+  background-image: url("https://i.gyazo.com/e5dbfe957ff8f0273af7e0a6a63eb5c4.jpg");
+  background-size: cover;
+  background-color: #000000;
+  background-position: center; 
+}
+
+tw-story[tags~="Caeina"] {
+  background-image: url("https://i.gyazo.com/f684ee9c37441cd52b610e49cc59ad78.jpg");
+  background-size: cover;
+  background-color: #000000;
+  background-position: center; 
+}
+
+tw-story[tags~="Nebora"] {
+  background-image: url("https://i.gyazo.com/dba9cd8881e98b6da1b740438f0b4ccd.jpg"); 
+  background-size: cover;
+  background-color: #000000;
+  background-position: center; 
+}
+
+-----------------------------------------------------------------------
+
+tw-icon {
+ 	opacity: 0.0; 
+}
+
+-----------------------------------------------------------------------
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Start" tags="extreme" position="500,100">{(print: &quot;&lt;script&gt;$(&#x27;html&#x27;).removeClass(\)&lt;/script&gt;&quot;)
+(if: (passage:)&#x27;s tags&#x27;s length &gt; 0)[
+(print: &quot;&lt;script&gt;$(&#x27;html&#x27;).addClass(&#x27;&quot; + (passage:)&#x27;s tags.join(&#x27; &#x27;) + &quot;&#x27;\)&lt;/script&gt;&quot;)
+]
+}
+=&gt;&lt;=
+Welcome to the Extreme G International Circuit.
+&#x60;____________&#x60;
+
+[[Race or die.™|Start Game]]
+
+[[Read up on the rules|Rules]]</tw-passagedata><tw-passagedata pid="2" name="Start Game" tags="extreme" position="500,300">&lt;div class=&quot;animated fadeIn&quot;&gt;Please review each team and their offerings.
+---
+[[► Prospa|Prospa]]
+[[► Ascend|Ascend]]
+[[► Trinity|Trinity]]
+[[► Olympius|Olympius]]
+[[► Starcom|Starcom]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Starcom" tags="starcom" position="900,500">Thank you for showing an interest in Starcom. A privately funded team, Starcom shines from the hype and publicity surrounding the Extreme-G Racing League. Nevertheless, in the interests of the group we are seeking new talent to join our world class racing team. We seek only exerienced drivers looking for a new adventure. With Starcom, you will see the world like you&#x27;ve never seen it before.
+
+We will bring the Extreme-G circuit to new heights. The stars will it. 
+=&gt;&lt;=
+
+[[Join Team Starcom.|Join Team Starcom]]</tw-passagedata><tw-passagedata pid="4" name="Olympius" tags="olympius" position="700,500">&lt;div class=&quot;animated fadeIn&quot;&gt;Olympius is the pinnacle of spectator enjoyment and at the forefront of Extreme-G racing. We deliver the entertaining spectacle that everyone adores. Our team of trained, professional racers will no doubt wow the world and secure a spot among the best teams out there. You can be among these stars of the Extreme-G circuit.
+
+Speed. Glamour. Excitement. These words define Extreme-G racing - and Team Olympius. 
+=&gt;&lt;=
+
+[[Join Team Olympius.|Join Team Olympius]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Trinity" tags="trinity" position="500,500">Formed in 2287, Trinity prides itself on being the only team voted Most Cohesive Team three years in a row. Our principles revolve around team unity and cooperation toward a larger goal. Thus, Team Trinity has strong financial backing to invest in better advancements for our Extreme-G bikes and our racers.
+
+Unity and image guides us; victory compels us. 
+=&gt;&lt;=
+
+[[Join Team Trinity.|Join Team Trinity]]</tw-passagedata><tw-passagedata pid="6" name="Ascend" tags="ascend" position="300,500">&quot;What will a racer do to achieve ascension?&quot; This is a question posed to the CEO of Iburashi Industries in 2275. Iburashi sought innovation and risk-taking decisions to grow their popularity - and we found it here in Extreme-G racing with Team Ascend. We look for the most rambunctious and controversial racers to fly the Ascend flag. We risk everything for the sake of glory and honor. We need racers to bear our banner.
+
+We will make our mark on the circuit. We will Ascend. 
+=&gt;&lt;=
+
+[[Join Team Ascend.|Join Team Ascend]]</tw-passagedata><tw-passagedata pid="7" name="Prospa" tags="prospa" position="100,500">Welcome to Team Prospa. Ever since Gabriel Artimus conceived and designed the Graviton Drive, no one thought it could be innovated further - until now. Prospa is proud to boast itself as the spiritual successor to Palus, the brain child Extreme-G team of Gabriel Artimus. We pride ourselves on bringing together innovation and presentation with all of our state-of-the-art Extreme-G bikes. No one can match us in mechanical marvel and technical prowess. With new potential racers like you, we can grow to be something even larger.
+
+We are the future of Extreme-G. We are Team Prospa. 
+=&gt;&lt;=
+
+[[Join Team Prospa.|Join Team Prospa]]</tw-passagedata><tw-passagedata pid="8" name="Join Team Olympius" tags="olympius" position="700,700">{(set: $team to &quot;Olympius&quot;)
+(set: $racingability to (random: 1, 50))
+(set: $extremegprowess to (random: 1, 50))
+(set: $popularity to (random: 50, 75))
+(set: $teamunity to (random: 1, 50))
+(set: $excitementappeal to (random: 50, 99))
+(set: $professionalism to (random: 1, 50))}&lt;div class=&quot;animated fadeIn&quot;&gt;&lt;script&gt;$(&#x27;tw-story&#x27;).removeClass(&#x27;no-navigation&#x27;)&lt;/script&gt;
+=&gt;&lt;=
+Welcome to Olympius, rookie.(live: 5s)[(go-to: &quot;Prep - Lithium League 1&quot;)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Join Team Ascend" tags="ascend" position="300,700">{(set: $team to &quot;Ascend&quot;)
+(set: $racingability to (random: 1, 50))
+(set: $extremegprowess to (random: 1, 50))
+(set: $popularity to (random: 51, 99))
+(set: $teamunity to (random: 1, 50))
+(set: $excitementappeal to (random: 25, 50))
+(set: $professionalism to (random: 1, 50))}&lt;script&gt;$(&#x27;tw-story&#x27;).removeClass(&#x27;no-navigation&#x27;)&lt;/script&gt;
+&lt;div class=&quot;animated fadeInUp&quot;&gt;
+=&gt;&lt;=
+Welcome to Ascend, rookie.(live: 5s)[(go-to: &quot;Prep - Lithium League 1&quot;)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Join Team Starcom" tags="starcom" position="900,700">{(set: $team to &quot;Starcom&quot;)
+(set: $racingability to (random: 1, 50))
+(set: $extremegprowess to (random: 50, 75))
+(set: $popularity to (random: 1, 50))
+(set: $teamunity to (random: 1, 50))
+(set: $excitementappeal to (random: 1, 50))
+(set: $professionalism to (random: 51, 99))}&lt;div class=&quot;animated fadeIn&quot;&gt;&lt;script&gt;$(&#x27;tw-story&#x27;).removeClass(&#x27;no-navigation&#x27;)&lt;/script&gt;
+=&gt;&lt;=
+Welcome to Starcom, recruit.(live: 5s)[(go-to: &quot;Prep - Lithium League 1&quot;)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Join Team Prospa" tags="prospa" position="100,700">{(set: $team to &quot;Prospa&quot;)
+(set: $racingability to (random: 50, 75))
+(set: $extremegprowess to (random: 51, 99))
+(set: $popularity to (random: 1, 50))
+(set: $teamunity to (random: 1, 50))
+(set: $excitementappeal to (random: 1, 50))
+(set: $professionalism to (random: 1, 50))}&lt;div class=&quot;animated fadeIn&quot;&gt;&lt;script&gt;$(&#x27;tw-story&#x27;).removeClass(&#x27;no-navigation&#x27;)&lt;/script&gt;
+=&gt;&lt;=
+Welcome to Prospa, rookie.(live: 5s)[(go-to: &quot;Prep - Lithium League 1&quot;)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Prep - Lithium League 1" tags="extreme" position="1600,100">{(set: $lithiumwins to 0)
+(set: $lithiumlossess to 0)}&lt;div class=&quot;animated fadeIn&quot;&gt;
+=&gt;&lt;=
+Welcome to the (text-color: cyan)[Lithium League.]
+
+&lt;==&gt;
+There are 5 races in this league and you must place 7th out of 10 possible racers.
+
+Your stats are as follows:
+
+Racing Ability: $racingability
+Extreme-G Prowess: $extremegprowess
+Popularity: $popularity
+Team Unity: $teamunity
+Excitement Appeal: $excitementappeal
+Professionalism: $professionalism
+
+(text-color: yellow)[Wins:] $lithiumwins
+(text-color: red)[Losses:] $lithiumlosses
+
+
+You and your team must preapre for the next race. How do you wish to train?
+---
+[[Practice Runs (+Racing Ability)|Practice Runs]]
+[[Research Extreme Bikes (+Extreme-G Prowess)|Research]]
+[[Sign Autographs (+Popularity)|Sign Autographs]]
+[[Strategize with your Team (+Team Unity)|Strategize]]
+[[Get Flashier Uniforms (+Excitement Appeal)|Flashier Uniforms]]
+[[Rebrand Team Image (+Professionalism)|Rebrand]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Join Team Trinity" tags="trinity" position="500,700">{(set: $team to &quot;Trinity&quot;)
+(set: $racingability to (random: 1, 50))
+(set: $extremegprowess to (random: 1, 50))
+(set: $popularity to (random: 1, 50))
+(set: $teamunity to (random: 51, 99))
+(set: $excitementappeal to (random: 1, 50))
+(set: $professionalism to (random: 1, 50))}&lt;div class=&quot;animated fadeIn&quot;&gt;&lt;script&gt;$(&#x27;tw-story&#x27;).removeClass(&#x27;no-navigation&#x27;)&lt;/script&gt;
+=&gt;&lt;=
+Welcome to Trinity, rookie.(live: 5s)[(go-to: &quot;Prep - Lithium League 1&quot;)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Rebrand" tags="" position="1975,300">(set: $professionalism to it + (random: 1,5))(if: $professionalism is &gt;= 99)[(set: $professionalism to 99)]You successfully devise new plans for a team rebranding.
+
+Your Professionalism is now: $professionalism(live: 5s)[(go-to: &quot;Race 1 - Lithium League - Amnes Isle&quot;)]</tw-passagedata><tw-passagedata pid="15" name="Flashier Uniforms" tags="" position="1825,300">(set: $excitementappeal to it + (random: 1,5))(if: $excitementappeal is &gt;= 99)[(set: $excitementappeal to 99)]You outfit your team with flashier, more exciting looking uniforms.
+
+Your Excitement Appeal is now $excitementappeal.(live: 5s)[(go-to: &quot;Race 1 - Lithium League - Amnes Isle&quot;)]</tw-passagedata><tw-passagedata pid="16" name="Strategize" tags="" position="1675,300">(set: $teamunity to it + (random: 1,5))(if: $teamunity is &gt;= 99)[(set: $teamunity to 99)]You devise new strageies with your teammates.
+
+Your Team Unity is now: $teamunity.(live: 5s)[(go-to: &quot;Race 1 - Lithium League - Amnes Isle&quot;)]</tw-passagedata><tw-passagedata pid="17" name="Sign Autographs" tags="" position="1525,300">(set: $popularity to it + (random: 1,5))(if: $popularity is &gt;= 99)[(set: $popularity to 99)]You spend your prep time signing holographic magazines and taking pictures with fans.
+
+Your Popularity is now: $popularity.(live: 5s)[(go-to: &quot;Race 1 - Lithium League - Amnes Isle&quot;)]</tw-passagedata><tw-passagedata pid="18" name="Research" tags="" position="1375,300">(set: $extremegprowess to it + (random: 1,5))(if: $extremegprowess is &gt;= 99)[(set: $extremegprowess to 99)]You spend plenty of time researching and reviewing various mechanisms of the latest Extreme-G gear bikes.
+
+Your Extreme-G Prowess is now: $extremegprowess.(live: 5s)[(go-to: &quot;Race 1 - Lithium League - Amnes Isle&quot;)]</tw-passagedata><tw-passagedata pid="19" name="Practice Runs" tags="" position="1225,300">(set: $racingability to it + (random: 1,5))(if: $racingability is &gt;= 99)[(set: $racingability to 99)]You and your team drive laps through the next track.
+
+Your Racing Ability is now: $racingability.(live: 5s)[(go-to: &quot;Race 1 - Lithium League - Amnes Isle&quot;)]</tw-passagedata><tw-passagedata pid="20" name="Race 1 - Lithium League - Amnes Isle" tags="Amnes-Isle" position="1600,500">&lt;div class=&quot;animated fadeIn&quot;&gt;Welcome to the Amnes Isle.
+
+A serene, peaceful island off the coast of Argentina. It is dotted with rolling hills and the flurry of foamy Atlantic waves crashing upon the South American shoreline.
+---
+[[Race!|Race 1 - Lithium League Start]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Race 1 - Lithium League Start" tags="Amnes-Isle" position="1600,700">You race and...
+
+(live: 3s)[(if: $racingability + $extremegprowess + $popularity + $teamunity + $excitementappeal + $professionalism &gt;= 198)[{(set: $lithiumwins to it + 1)}You placed!](else:)[{(set: $lithiumlosses to it + 1)}You failed to place.](live: 3s)[(go-to: &quot;Prep - Lithium League 2&quot;)]]</tw-passagedata><tw-passagedata pid="22" name="Prep - Lithium League 2" tags="extreme" position="2600,100">&lt;div class=&quot;animated fadeIn&quot;&gt;
+=&gt;&lt;=
+You are currently in the (text-color: cyan)[Lithium League.]
+
+&lt;==&gt;
+There are 4 more races in this league and you must place 7th out of 10 possible racers.
+
+Your stats are as follows:
+
+Racing Ability: $racingability
+Extreme-G Prowess: $extremegprowess
+Popularity: $popularity
+Team Unity: $teamunity
+Excitement Appeal: $excitementappeal
+Professionalism: $professionalism
+
+(text-color: yellow)[Wins:] $lithiumwins
+(text-color: red)[Losses:] $lithiumlosses
+
+
+You and your team must preapre for the next race. How do you wish to train?
+---
+[[Practice Runs (+Racing Ability)|Practice Runs - Lithium League 2]]
+[[Research Extreme Bikes (+Extreme-G Prowess)|Research - Lithium League 2]]
+[[Sign Autographs (+Popularity)|Sign Autographs - Lithium League 2]]
+[[Strategize with your Team (+Team Unity)|Strategize - Lithium League 2]]
+[[Get Flashier Uniforms (+Excitement Appeal)|Flashier Uniforms - Lithium League 2]]
+[[Rebrand Team Image (+Professionalism)|Rebrand - Lithium League 2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Practice Runs - Lithium League 2" tags="" position="2225,300">(set: $racingability to it + (random: 1,5))(if: $racingability is &gt;= 99)[(set: $racingability to 99)]You and your team drive laps through the next track.
+
+Your Racing Ability is now: $racingability.(live: 5s)[(go-to: &quot;Race 2 - Lithium League - Volistead&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Research - Lithium League 2" tags="" position="2375,300">(set: $extremegprowess to it + (random: 1,5))(if: $extremegprowess is &gt;= 99)[(set: $extremegprowess to 99)]You spend plenty of time researching and reviewing various mechanisms of the latest Extreme-G gear bikes.
+
+Your Extreme-G Prowess is now: $extremegprowess.(live: 5s)[(go-to: &quot;Race 2 - Lithium League - Volistead&quot;)]</tw-passagedata><tw-passagedata pid="25" name="Sign Autographs - Lithium League 2" tags="" position="2525,300">(set: $popularity to it + (random: 1,5))(if: $popularity is &gt;= 99)[(set: $popularity to 99)]You spend your prep time signing holographic magazines and taking pictures with fans.
+
+Your Popularity is now: $popularity.(live: 5s)[(go-to: &quot;Race 2 - Lithium League - Volistead&quot;)]</tw-passagedata><tw-passagedata pid="26" name="Strategize - Lithium League 2" tags="" position="2675,300">(set: $teamunity to it + (random: 1,5))(if: $teamunity is &gt;= 99)[(set: $teamunity to 99)]You devise new strageies with your teammates.
+
+Your Team Unity is now: $teamunity.(live: 5s)[(go-to: &quot;Race 2 - Lithium League - Volistead&quot;)]</tw-passagedata><tw-passagedata pid="27" name="Flashier Uniforms - Lithium League 2" tags="" position="2825,300">(set: $excitementappeal to it + (random: 1,5))(if: $excitementappeal is &gt;= 99)[(set: $excitementappeal to 99)]You outfit your team with flashier, more exciting looking uniforms.
+
+Your Excitement Appeal is now $excitementappeal.(live: 5s)[(go-to: &quot;Race 2 - Lithium League - Volistead&quot;)]</tw-passagedata><tw-passagedata pid="28" name="Rebrand - Lithium League 2" tags="" position="2975,300">(set: $professionalism to it + (random: 1,5))(if: $professionalism is &gt;= 99)[(set: $professionalism to 99)]You successfully devise new plans for a team rebranding.
+
+Your Professionalism is now: $professionalism(live: 5s)[(go-to: &quot;Race 2 - Lithium League - Volistead&quot;)]</tw-passagedata><tw-passagedata pid="29" name="Race 2 - Lithium League - Volistead" tags="Volistead" position="2600,500">&lt;div class=&quot;animated fadeIn&quot;&gt;Welcome to Volistead.
+
+Once a neglected fishing village, Volistead has since seen a boom in tourism thanks to the Extreme-G Circuit, however fleeting it is. The open, uninterrupted skies and deceiving wind changes makes Volistead a popular site for an Extreme-G race.
+---
+[[Race!|Race 2 Lithium League Start]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Race 2 Lithium League Start" tags="Volistead" position="2600,700">You race and...
+
+(live: 3s)[(if: 594 / $racingability + $extremegprowess + $popularity + $teamunity + $excitementappeal + $professionalism &gt;= 213)[{(set: $lithiumwins to it + 1)}You placed!](else:)[{(set: $lithiumlosses to it + 1)}You failed to place.](live: 3s)[(go-to: &quot;Prep - Lithium League 3&quot;)]]</tw-passagedata><tw-passagedata pid="31" name="Prep - Lithium League 3" tags="extreme" position="3600,100">&lt;div class=&quot;animated fadeIn&quot;&gt;
+=&gt;&lt;=
+You are currently in the (text-color: cyan)[Lithium League.]
+
+&lt;==&gt;
+There are 3 more races in this league and you must place 7th out of 10 possible racers.
+
+Your stats are as follows:
+
+Racing Ability: $racingability
+Extreme-G Prowess: $extremegprowess
+Popularity: $popularity
+Team Unity: $teamunity
+Excitement Appeal: $excitementappeal
+Professionalism: $professionalism
+
+(text-color: yellow)[Wins:] $lithiumwins
+(text-color: red)[Losses:] $lithiumlosses
+
+
+You and your team must preapre for the next race. How do you wish to train?
+---
+[[Practice Runs (+Racing Ability)|Practice Runs - Lithium League 3]]
+[[Research Extreme Bikes (+Extreme-G Prowess)|Research - Lithium League 3]]
+[[Sign Autographs (+Popularity)|Sign Autographs - Lithium League 3]]
+[[Strategize with your Team (+Team Unity)|Strategize - Lithium League 3]]
+[[Get Flashier Uniforms (+Excitement Appeal)|Flashier Uniforms - Lithium League 3]]
+[[Rebrand Team Image (+Professionalism)|Rebrand - Lithium League 3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Prep - Lithium League 4" tags="extreme" position="4600,100">&lt;div class=&quot;animated fadeIn&quot;&gt;
+=&gt;&lt;=
+You are currently in the (text-color: cyan)[Lithium League.]
+
+&lt;==&gt;
+There are 2 more races in this league and you must place 7th out of 10 possible racers.
+
+Your stats are as follows:
+
+Racing Ability: $racingability
+Extreme-G Prowess: $extremegprowess
+Popularity: $popularity
+Team Unity: $teamunity
+Excitement Appeal: $excitementappeal
+Professionalism: $professionalism
+
+(text-color: yellow)[Wins:] $lithiumwins
+(text-color: red)[Losses:] $lithiumlosses
+
+
+You and your team must preapre for the next race. How do you wish to train?
+---
+[[Practice Runs (+Racing Ability)|Practice Runs - Lithium League 4]]
+[[Research Extreme Bikes (+Extreme-G Prowess)|Research - Lithium League 4]]
+[[Sign Autographs (+Popularity)|Sign Autographs - Lithium League 4]]
+[[Strategize with your Team (+Team Unity)|Strategize - Lithium League 4]]
+[[Get Flashier Uniforms (+Excitement Appeal)|Flashier Uniforms - Lithium League 4]]
+[[Rebrand Team Image (+Professionalism)|Rebrand - Lithium League 4]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="Practice Runs - Lithium League 3" tags="" position="3225,300">(set: $racingability to it + (random: 1,5))(if: $racingability is &gt;= 99)[(set: $racingability to 99)]You and your team drive laps through the next track.
+
+Your Racing Ability is now: $racingability.(live: 5s)[(go-to: &quot;Race 3 - Lithium League - Dahr Canyon&quot;)]</tw-passagedata><tw-passagedata pid="34" name="Research - Lithium League 3" tags="" position="3375,300">(set: $extremegprowess to it + (random: 1,5))(if: $extremegprowess is &gt;= 99)[(set: $extremegprowess to 99)]You spend plenty of time researching and reviewing various mechanisms of the latest Extreme-G gear bikes.
+
+Your Extreme-G Prowess is now: $extremegprowess.(live: 5s)[(go-to: &quot;Race 3 - Lithium League - Dahr Canyon&quot;)]</tw-passagedata><tw-passagedata pid="35" name="Sign Autographs - Lithium League 3" tags="" position="3525,300">(set: $popularity to it + (random: 1,5))(if: $popularity is &gt;= 99)[(set: $popularity to 99)]You spend your prep time signing holographic magazines and taking pictures with fans.
+
+Your Popularity is now: $popularity.(live: 5s)[(go-to: &quot;Race 3 - Lithium League - Dahr Canyon&quot;)]</tw-passagedata><tw-passagedata pid="36" name="Strategize - Lithium League 3" tags="" position="3675,300">(set: $teamunity to it + (random: 1,5))(if: $teamunity is &gt;= 99)[(set: $teamunity to 99)]You devise new strageies with your teammates.
+
+Your Team Unity is now: $teamunity.(live: 5s)[(go-to: &quot;Race 3 - Lithium League - Dahr Canyon&quot;)]</tw-passagedata><tw-passagedata pid="37" name="Flashier Uniforms - Lithium League 3" tags="" position="3825,300">(set: $excitementappeal to it + (random: 1,5))(if: $excitementappeal is &gt;= 99)[(set: $excitementappeal to 99)]You outfit your team with flashier, more exciting looking uniforms.
+
+Your Excitement Appeal is now $excitementappeal.(live: 5s)[(go-to: &quot;Race 3 - Lithium League - Dahr Canyon&quot;)]</tw-passagedata><tw-passagedata pid="38" name="Rebrand - Lithium League 3" tags="" position="3975,300">(set: $professionalism to it + (random: 1,5))(if: $professionalism is &gt;= 99)[(set: $professionalism to 99)]You successfully devise new plans for a team rebranding.
+
+Your Professionalism is now: $professionalism(live: 5s)[(go-to: &quot;Race 3 - Lithium League - Dahr Canyon&quot;)]</tw-passagedata><tw-passagedata pid="39" name="Race 3 - Lithium League - Dahr Canyon" tags="Dahr-Canyon" position="3600,500">&lt;div class=&quot;animated fadeIn&quot;&gt;Welcome to Dahr Canyon.
+
+Home to the nomadic Suphar peoples, Dahr Canyon mercilessly carves a path through the hot desert rocks. Locals seem to be a bit purturbed by the presence of the Extreme-G circuit, but the circuit remains.
+---
+[[Race!|Race 3 Lithium League Start]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Race 3 Lithium League Start" tags="Dahr-Canyon" position="3600,700">You race and...
+
+(live: 3s)[(if: 594 / $racingability + $extremegprowess + $popularity + $teamunity + $excitementappeal + $professionalism &gt;= 233)[{(set: $lithiumwins to it + 1)}You placed!](else:)[{(set: $lithiumlosses to it + 1)}You failed to place.](live: 3s)[(go-to: &quot;Prep - Lithium League 4&quot;)]]</tw-passagedata><tw-passagedata pid="41" name="Race 4 - Lithium League - Pion 6" tags="Pion-6" position="4600,500">&lt;div class=&quot;animated fadeIn&quot;&gt;Welcome to Pion 6.
+
+The ruins of Pion 6 still stand tall in the harsh desert wasteland. After two milleneum, the towering colossus of a metal eagle scans the landscape, hungry to find its next prey: the ambitious thrill-seeker.
+---
+[[Race!|Race 4 Lithium League Start]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="Practice Runs - Lithium League 4" tags="" position="4225,300">(set: $racingability to it + (random: 1,5))(if: $racingability is &gt;= 99)[(set: $racingability to 99)]You and your team drive laps through the next track.
+
+Your Racing Ability is now: $racingability.(live: 5s)[(go-to: &quot;Race 4 - Lithium League - Pion 6&quot;)]</tw-passagedata><tw-passagedata pid="43" name="Research - Lithium League 4" tags="" position="4375,300">(set: $extremegprowess to it + (random: 1,5))(if: $extremegprowess is &gt;= 99)[(set: $extremegprowess to 99)]You spend plenty of time researching and reviewing various mechanisms of the latest Extreme-G gear bikes.
+
+Your Extreme-G Prowess is now: $extremegprowess.(live: 5s)[(go-to: &quot;Race 4 - Lithium League - Pion 6&quot;)]</tw-passagedata><tw-passagedata pid="44" name="Sign Autographs - Lithium League 4" tags="" position="4525,300">(set: $popularity to it + (random: 1,5))(if: $popularity is &gt;= 99)[(set: $popularity to 99)]You spend your prep time signing holographic magazines and taking pictures with fans.
+
+Your Popularity is now: $popularity.(live: 5s)[(go-to: &quot;Race 4 - Lithium League - Pion 6&quot;)]</tw-passagedata><tw-passagedata pid="45" name="Strategize - Lithium League 4" tags="" position="4675,300">(set: $teamunity to it + (random: 1,5))(if: $teamunity is &gt;= 99)[(set: $teamunity to 99)]You devise new strageies with your teammates.
+
+Your Team Unity is now: $teamunity.(live: 5s)[(go-to: &quot;Race 4 - Lithium League - Pion 6&quot;)]</tw-passagedata><tw-passagedata pid="46" name="Flashier Uniforms - Lithium League 4" tags="" position="4825,300">(set: $excitementappeal to it + (random: 1,5))(if: $excitementappeal is &gt;= 99)[(set: $excitementappeal to 99)]You outfit your team with flashier, more exciting looking uniforms.
+
+Your Excitement Appeal is now $excitementappeal.(live: 5s)[(go-to: &quot;Race 4 - Lithium League - Pion 6&quot;)]</tw-passagedata><tw-passagedata pid="47" name="Rebrand - Lithium League 4" tags="" position="4975,300">(set: $professionalism to it + (random: 1,5))(if: $professionalism is &gt;= 99)[(set: $professionalism to 99)]You successfully devise new plans for a team rebranding.
+
+Your Professionalism is now: $professionalism(live: 5s)[(go-to: &quot;Race 4 - Lithium League - Pion 6&quot;)]</tw-passagedata><tw-passagedata pid="48" name="Race 4 Lithium League Start" tags="Pion-6" position="4600,700">You race and...
+
+(live: 3s)[(if: 594 / $racingability + $extremegprowess + $popularity + $teamunity + $excitementappeal + $professionalism &gt;= 253)[{(set: $lithiumwins to it + 1)}You placed!](else:)[{(set: $lithiumlosses to it + 1)}You failed to place.](live: 3s)[(go-to: &quot;Prep - Lithium League 5&quot;)]]</tw-passagedata><tw-passagedata pid="49" name="Prep - Lithium League 5" tags="extreme" position="5600,100">&lt;div class=&quot;animated fadeIn&quot;&gt;
+=&gt;&lt;=
+You are currently in the (text-color: cyan)[Lithium League.]
+
+&lt;==&gt;
+There are 1 more race in this league and you must place 7th out of 10 possible racers.
+
+Your stats are as follows:
+
+Racing Ability: $racingability
+Extreme-G Prowess: $extremegprowess
+Popularity: $popularity
+Team Unity: $teamunity
+Excitement Appeal: $excitementappeal
+Professionalism: $professionalism
+
+(text-color: yellow)[Wins:] $lithiumwins
+(text-color: red)[Losses:] $lithiumlosses
+
+
+You and your team must preapre for the next race. How do you wish to train?
+---
+[[Practice Runs (+Racing Ability)|Practice Runs - Lithium League 5]]
+[[Research Extreme Bikes (+Extreme-G Prowess)|Research - Lithium League 5]]
+[[Sign Autographs (+Popularity)|Sign Autographs - Lithium League 5]]
+[[Strategize with your Team (+Team Unity)|Strategize - Lithium League 5]]
+[[Get Flashier Uniforms (+Excitement Appeal)|Flashier Uniforms - Lithium League 5]]
+[[Rebrand Team Image (+Professionalism)|Rebrand - Lithium League 5]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="Practice Runs - Lithium League 5" tags="" position="5225,300">(set: $racingability to it + (random: 1,5))(if: $racingability is &gt;= 99)[(set: $racingability to 99)]You and your team drive laps through the next track.
+
+Your Racing Ability is now: $racingability.(live: 5s)[(go-to: &quot;Race 5 - Lithium League - Atradaitoshi&quot;)]</tw-passagedata><tw-passagedata pid="51" name="Research - Lithium League 5" tags="" position="5375,300">(set: $extremegprowess to it + (random: 1,5))(if: $extremegprowess is &gt;= 99)[(set: $extremegprowess to 99)]You spend plenty of time researching and reviewing various mechanisms of the latest Extreme-G gear bikes.
+
+Your Extreme-G Prowess is now: $extremegprowess.(live: 5s)[(go-to: &quot;Race 5 - Lithium League - Atradaitoshi&quot;)]</tw-passagedata><tw-passagedata pid="52" name="Sign Autographs - Lithium League 5" tags="" position="5525,300">(set: $popularity to it + (random: 1,5))(if: $popularity is &gt;= 99)[(set: $popularity to 99)]You spend your prep time signing holographic magazines and taking pictures with fans.
+
+Your Popularity is now: $popularity.(live: 5s)[(go-to: &quot;Race 5 - Lithium League - Atradaitoshi&quot;)]</tw-passagedata><tw-passagedata pid="53" name="Strategize - Lithium League 5" tags="" position="5675,300">(set: $teamunity to it + (random: 1,5))(if: $teamunity is &gt;= 99)[(set: $teamunity to 99)]You devise new strageies with your teammates.
+
+Your Team Unity is now: $teamunity.(live: 5s)[(go-to: &quot;Race 5 - Lithium League - Atradaitoshi&quot;)]</tw-passagedata><tw-passagedata pid="54" name="Flashier Uniforms - Lithium League 5" tags="" position="5825,300">(set: $excitementappeal to it + (random: 1,5))(if: $excitementappeal is &gt;= 99)[(set: $excitementappeal to 99)]You outfit your team with flashier, more exciting looking uniforms.
+
+Your Excitement Appeal is now $excitementappeal.(live: 5s)[(go-to: &quot;Race 5 - Lithium League - Atradaitoshi&quot;)]</tw-passagedata><tw-passagedata pid="55" name="Rebrand - Lithium League 5" tags="" position="5975,300">(set: $professionalism to it + (random: 1,5))(if: $professionalism is &gt;= 99)[(set: $professionalism to 99)]You successfully devise new plans for a team rebranding.
+
+Your Professionalism is now: $professionalism(live: 5s)[(go-to: &quot;Race 5 - Lithium League - Atradaitoshi&quot;)]</tw-passagedata><tw-passagedata pid="56" name="Rules" tags="" position="100,100">Founded at the end of the 22nd century, the League prides itself in presenting the ultimate racing challenge for today&#x27;s sports fan.
+
+The extreme-G Racing League has created a racing experience that combines incredible beauty with 23rd century engineering expertise.
+
+Each race sees ten riders battling for the title of Extreme-G Champion. At the end of a race, victorious riders will be rewarded with credits. These can be spent on upgrading the bike or purchasing new weapons - visit the XG Mall for more information.
+
+In order to qualify for a new league, each contestant must accumulate a required amount of wins. Each league consists of five races, and teams that win at least three races will move on to the next league. Eventually, the contestant will be invited to race in a more advanced speed class.
+
+[[Return|Start]]</tw-passagedata><tw-passagedata pid="57" name="Race 5 - Lithium League - Atradaitoshi" tags="Atradaitoshi" position="5600,500">&lt;div class=&quot;animated fadeIn&quot;&gt;Welcome to Atradaitoshi.
+
+Constructed high above the city streets and weaving in between the city&#x27;s skyscrapers, this track features breathtaking drops and jumps that push the most skilled riders to the max. Surprisingly, traffic has not changed at all since the Extreme-G circuit arrived years ago.
+---
+[[Race!|Race 5 Lithium League Start]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Race 5 Lithium League Start" tags="Atradaitoshi" position="5600,700">You race and...
+
+(live: 3s)[(if: 594 / $racingability + $extremegprowess + $popularity + $teamunity + $excitementappeal + $professionalism &gt;= 273)[{(set: $lithiumwins to it + 1)}You placed!](else:)[{(set: $lithiumlosses to it + 1)}You failed to place.](live: 3s)[(go-to: &quot;Lithium League Results&quot;)]]</tw-passagedata><tw-passagedata pid="59" name="Lithium League Results" tags="" position="6400,300">(if: $lithiumwins &gt; $lithiumlosses)[Congratulations. You have secured victory for Team $team in the (text-color: cyan)[Lithium League].
+
+You have been promoted to the [[Rubidium League.|Rivalry 1]]
+
+]</tw-passagedata><tw-passagedata pid="60" name="Prep - Rubidium League 1" tags="" position="1500,1700">{(set: $rubidiumwins to 0)
+(set: $rubidiumlossess to 0)}&lt;div class=&quot;animated fadeIn&quot;&gt;
+=&gt;&lt;=
+Welcome to the (text-color: brown)[Rubidium League.]
+
+&lt;==&gt;
+There are 5 races in this league and you must place 7th out of 10 possible racers.
+
+Your stats are as follows:
+
+Racing Ability: $racingability
+Extreme-G Prowess: $extremegprowess
+Popularity: $popularity
+Team Unity: $teamunity
+Excitement Appeal: $excitementappeal
+Professionalism: $professionalism
+
+(text-color: yellow)[Wins:] $rubidiumwins
+(text-color: red)[Losses:] $rubidiumlosses
+
+
+You and your team must preapre for the next race. How do you wish to train?
+---
+[[Practice Runs (+Racing Ability)|Practice Runs - Rubidium League 1]]
+[[Research Extreme Bikes (+Extreme-G Prowess)|Research - Rubidium League 1]]
+[[Sign Autographs (+Popularity)|Sign Autographs - Rubidium League 1]]
+[[Strategize with your Team (+Team Unity)|Strategize - Rubidium League 1]]
+[[Get Flashier Uniforms (+Excitement Appeal)|Flashier Uniforms - Rubidium League 1]]
+[[Rebrand Team Image (+Professionalism)|Rebrand - Rubidium League 1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Practice Runs - Rubidium League 1" tags="" position="1100,1500">(set: $racingability to it + (random: 5,10))(if: $racingability is &gt;= 99)[(set: $racingability to 99)]You and your team drive laps through the next track.
+
+Your Racing Ability is now: $racingability.(live: 5s)[(go-to: &quot;Race 1 - Rubidium League - Caeina&quot;)]</tw-passagedata><tw-passagedata pid="62" name="Research - Rubidium League 1" tags="" position="1250,1400">(set: $extremegprowess to it + (random: 1,5))(if: $extremegprowess is &gt;= 99)[(set: $extremegprowess to 99)]You spend plenty of time researching and reviewing various mechanisms of the latest Extreme-G gear bikes.
+
+Your Extreme-G Prowess is now: $extremegprowess.(live: 5s)[(go-to: &quot;Race 1 - Rubidium League - Caeina&quot;)]</tw-passagedata><tw-passagedata pid="63" name="Sign Autographs - Rubidium League 1" tags="" position="1400,1300">(set: $popularity to it + (random: 1,5))(if: $popularity is &gt;= 99)[(set: $popularity to 99)]You spend your prep time signing holographic magazines and taking pictures with fans.
+
+Your Popularity is now: $popularity.(live: 5s)[(go-to: &quot;Race 1 - Rubidium League - Caeina&quot;)]</tw-passagedata><tw-passagedata pid="64" name="Strategize - Rubidium League 1" tags="" position="1600,1300">(set: $teamunity to it + (random: 1,5))(if: $teamunity is &gt;= 99)[(set: $teamunity to 99)]You devise new strageies with your teammates.
+
+Your Team Unity is now: $teamunity.(live: 5s)[(go-to: &quot;Race 1 - Rubidium League - Caeina&quot;)]</tw-passagedata><tw-passagedata pid="65" name="Flashier Uniforms - Rubidium League 1" tags="" position="1750,1400">(set: $excitementappeal to it + (random: 1,5))(if: $excitementappeal is &gt;= 99)[(set: $excitementappeal to 99)]You outfit your team with flashier, more exciting looking uniforms.
+
+Your Excitement Appeal is now $excitementappeal.(live: 5s)[(go-to: &quot;Race 1 - Rubidium League - Caeina&quot;)]</tw-passagedata><tw-passagedata pid="66" name="Rebrand - Rubidium League 1" tags="" position="1900,1500">(set: $professionalism to it + (random: 1,5))(if: $professionalism is &gt;= 99)[(set: $professionalism to 99)]You successfully devise new plans for a team rebranding.
+
+Your Professionalism is now: $professionalism(live: 5s)[(go-to: &quot;Race 1 - Rubidium League - Caeina&quot;)]</tw-passagedata><tw-passagedata pid="67" name="Race 1 - Rubidium League - Caeina" tags="Caeina" position="1500,1900">&lt;div class=&quot;animated fadeIn&quot;&gt;Welcome to Caeina.
+
+Located deep in the Amazonian jungle, the Caeina Collective Laboratory complex utilizes the dense treeline to create prolific Extreme-G tracks.
+---
+[[Race!|Race 1 - Rubidium League Start]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="Race 1 - Rubidium League Start" tags="" position="1500,2100">You race and...
+
+(live: 3s)[(if: $racingability + $extremegprowess + $popularity + $teamunity + $excitementappeal + $professionalism &gt;= 213)[{(set: $rubidiumwins to it + 1)}You placed!](else:)[{(set: $rubidiumlosses to it + 1)}You failed to place.](live: 3s)[(go-to: &quot;Prep - Rubidium League 2&quot;)]]</tw-passagedata><tw-passagedata pid="69" name="Rivalry 1" tags="" position="6400,500">As you are regrouping with your team, your manager points past you and exclaims, &quot;What do you guys want?&quot; You turn and see another team walking towards you, clapping slowly.
+
+(if: $team is &quot;Prospa&quot;)[&quot;Well! Congratulations on your victory, Prospa.&quot;]
+(elseif: $team is &quot;Ascend&quot;)[]
+(elseif: $team is &quot;Trinity&quot;)[]
+(elseif: $team is &quot;Olympius&quot;)[]
+(elseif: $team is &quot;Starcom&quot;)[]</tw-passagedata><tw-passagedata pid="70" name="Prep - Rubidium League 2" tags="" position="2600,1700">&lt;div class=&quot;animated fadeIn&quot;&gt;
+=&gt;&lt;=
+You are currently in the (text-color: brown)[Rubidium League.]
+
+&lt;==&gt;
+There are 4 more races in this league and you must place 7th out of 10 possible racers.
+
+Your stats are as follows:
+
+Racing Ability: $racingability
+Extreme-G Prowess: $extremegprowess
+Popularity: $popularity
+Team Unity: $teamunity
+Excitement Appeal: $excitementappeal
+Professionalism: $professionalism
+
+(text-color: yellow)[Wins:] $rubidiumwins
+(text-color: red)[Losses:] $rubidiumlosses
+
+
+You and your team must preapre for the next race. How do you wish to train?
+---
+[[Practice Runs (+Racing Ability)|Practice Runs - Rubidium League 2]]
+[[Research Extreme Bikes (+Extreme-G Prowess)|Research - Rubidium League 2]]
+[[Sign Autographs (+Popularity)|Sign Autographs - Rubidium League 2]]
+[[Strategize with your Team (+Team Unity)|Strategize - Rubidium League 2]]
+[[Get Flashier Uniforms (+Excitement Appeal)|Flashier Uniforms - Rubidium League 2]]
+[[Rebrand Team Image (+Professionalism)|Rebrand - Rubidium League 2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="Practice Runs - Rubidium League 2" tags="" position="2200,1500">(set: $racingability to it + (random: 5,10))(if: $racingability is &gt;= 99)[(set: $racingability to 99)]You and your team drive laps through the next track.
+
+Your Racing Ability is now: $racingability.(live: 5s)[(go-to: &quot;Race 2 - Rubidium League - Nebora&quot;)]</tw-passagedata><tw-passagedata pid="72" name="Research - Rubidium League 2" tags="" position="2350,1400">(set: $extremegprowess to it + (random: 1,5))(if: $extremegprowess is &gt;= 99)[(set: $extremegprowess to 99)]You spend plenty of time researching and reviewing various mechanisms of the latest Extreme-G gear bikes.
+
+Your Extreme-G Prowess is now: $extremegprowess.(live: 5s)[(go-to: &quot;Race 2 - Rubidium League - Nebora&quot;)]</tw-passagedata><tw-passagedata pid="73" name="Sign Autographs - Rubidium League 2" tags="" position="2500,1300">(set: $popularity to it + (random: 1,5))(if: $popularity is &gt;= 99)[(set: $popularity to 99)]You spend your prep time signing holographic magazines and taking pictures with fans.
+
+Your Popularity is now: $popularity.(live: 5s)[(go-to: &quot;Race 2 - Rubidium League - Nebora&quot;)]</tw-passagedata><tw-passagedata pid="74" name="Strategize - Rubidium League 2" tags="" position="2700,1300">(set: $teamunity to it + (random: 1,5))(if: $teamunity is &gt;= 99)[(set: $teamunity to 99)]You devise new strageies with your teammates.
+
+Your Team Unity is now: $teamunity.(live: 5s)[(go-to: &quot;Race 2 - Rubidium League - Nebora&quot;)]</tw-passagedata><tw-passagedata pid="75" name="Flashier Uniforms - Rubidium League 2" tags="" position="2850,1400">(set: $excitementappeal to it + (random: 1,5))(if: $excitementappeal is &gt;= 99)[(set: $excitementappeal to 99)]You outfit your team with flashier, more exciting looking uniforms.
+
+Your Excitement Appeal is now $excitementappeal.(live: 5s)[(go-to: &quot;Race 2 - Rubidium League - Nebora&quot;)]</tw-passagedata><tw-passagedata pid="76" name="Rebrand - Rubidium League 2" tags="" position="3000,1500">(set: $professionalism to it + (random: 1,5))(if: $professionalism is &gt;= 99)[(set: $professionalism to 99)]You successfully devise new plans for a team rebranding.
+
+Your Professionalism is now: $professionalism(live: 5s)[(go-to: &quot;Race 2 - Rubidium League - Nebora&quot;)]</tw-passagedata><tw-passagedata pid="77" name="Race 2 - Rubidium League - Nebora" tags="" position="2600,1900">&lt;div class=&quot;animated fadeIn&quot;&gt;Welcome to Nebora.
+
+Outpost Nebora rests on the Arctic shelf as a once popular research station. Nowadays, it (along with the environment itself) is on the verge of collapse, making the outpost a hotspot for any daredevil Extreme-G racer.
+---
+[[Race!|Race 2 - Rubidium League Start]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="Race 2 - Rubidium League Start" tags="" position="2600,2100">You race and...
+
+(live: 3s)[(if: $racingability + $extremegprowess + $popularity + $teamunity + $excitementappeal + $professionalism &gt;= 233)[{(set: $rubidiumwins to it + 1)}You placed!](else:)[{(set: $rubidiumlosses to it + 1)}You failed to place.](live: 3s)[(go-to: &quot;Prep - Rubidium League 2&quot;)]]</tw-passagedata></tw-storydata>
